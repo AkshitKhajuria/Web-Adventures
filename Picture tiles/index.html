@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Tiles</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="center">
+		<div class="gallery" id="gallery">
+			<div class="tile">
+				<img src="./images/mounatains sunrise scenery.jpg">
+			</div>
+			<div class="tile">
+				<img src="./images/firewatch.jpg">
+			</div>
+			<div class="tile">
+				<img src="./images/snow mountains.jpg">
+			</div>
+			<div class="tile">
+				<img src="./images/geometric.jpg">
+			</div>
+			<div class="tile">
+				<img src="./images/red snow mountains.jpg">
+			</div>
+		</div>
+		<div class="modal">
+			<img src="./images/mounatains sunrise scenery.jpg" class="full-image">
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		const modal = document.querySelector('.modal');
+		const images = document.querySelectorAll('.gallery img');
+		const full_image = document.querySelector('.full-image');
+		images.forEach(image=>{
+			image.addEventListener('click',()=>{
+				modal.classList.add('open');
+				full_image.classList.add('open');
+				full_image.src=image.src;
+			})
+		});
+
+		modal.addEventListener('click',(event)=>{
+			if(event.target.classList.contains('modal')){
+				modal.classList.remove('open');
+				full_image.classList.remove('open');
+			}
+		})
+	</script>
+</body>
+</html>

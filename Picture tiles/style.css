@@ -1,0 +1,84 @@
+
+body {
+	padding: 0;
+    margin: 0;
+    background: linear-gradient(#2a9d8f 10%,#264653,#001233);
+    
+}
+
+.center{
+	padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: max-content;
+}
+
+.gallery{
+	display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 5px;
+    justify-content: center;
+    width: 60vw;
+    height: auto;
+    overflow: hidden;
+}
+
+.tile{
+	width: 100px;
+    height: 420px;
+    padding: 0;
+    margin-right: 3px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.tile img{
+	height: 100%;
+	width: auto;
+	transition: 0.2s ease-out;
+	cursor: pointer;
+}
+
+.tile img:hover{
+	transform: scale(1.2);
+	transition: 0.2s ease-out;
+}
+
+.modal{
+	background: rgba(0,0,0,0.6);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.2s ease-out;
+}
+
+.modal.open{
+	opacity: 1;
+	pointer-events: all;
+}
+
+.full-image{
+	position: absolute;
+	height: 75%;
+	width: 75%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%) scale(0.5);
+	transition: all 0.2s ease-out;
+}
+
+.full-image.open{
+	transform: translate(-50%,-50%) scale(1);
+}
