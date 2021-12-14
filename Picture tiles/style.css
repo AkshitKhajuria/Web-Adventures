@@ -1,9 +1,14 @@
 
+html {
+    height: 100%;
+}
+
+
 body {
-	padding: 0;
+    padding: 0;
     margin: 0;
     background: linear-gradient(#2a9d8f 10%,#264653,#001233);
-    
+    min-height: 100%;
 }
 
 .center{
